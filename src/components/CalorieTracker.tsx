@@ -22,7 +22,7 @@ export default function CalorieTracker({activities}: CalorieTrackerProps) {
          <CalorieDisplay
             calories={netCalories}
             text="Diferencia"
-            color="text-white"
+            color= {netCalories >= 0 ? netCalories === 0 ? "text-white" : " text-lime-500" :"text-orange-500" }
          />
          <CalorieDisplay
             calories={caloriesBurned}

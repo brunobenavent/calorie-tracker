@@ -29,7 +29,7 @@ export default function ActivityList({activities, dispatch}: ActivityListProps) 
                             {categoryName(+activity.category)}
                     </p>
                     <p className="text-2xl font-bold pt-5">{activity.name}</p>
-                    <p className="font-black text-4xl text-lime-500">{activity.calories}{''}</p>
+                    <p className={`font-black text-4xl ${activity.category===1 ? "text-lime-500" : "text-orange-500"}`}>{activity.calories}{''}</p>
                     </div>
                     <div className="flex gap-5 items-center">
                         <button
